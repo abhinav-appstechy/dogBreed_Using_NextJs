@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const FooterItem = ({ text, link }) => {
+const FooterItem: React.FC<any> = ({ text, link }) => {
   return (
     <li>
       <Link
@@ -13,14 +13,14 @@ const FooterItem = ({ text, link }) => {
   );
 };
 
-const FooterBlockItem = ({ title, items }) => {
+const FooterBlockItem: React.FC<any> = ({ title, items }) => {
   return (
     <div className="space-y-6">
       <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
         {title}
       </h1>
       <ul className="space-y-3">
-        {items.map((item) => (
+        {items.map((item: any) => (
           <FooterItem key={item.id} {...item} />
         ))}
       </ul>
